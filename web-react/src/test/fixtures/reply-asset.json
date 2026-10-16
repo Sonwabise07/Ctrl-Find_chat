@@ -1,0 +1,80 @@
+{
+  "scope": "in",
+  "answer": "**AST-0001** is a Dell Latitude 5440 laptop, currently **Assigned** at Umhlanga, held by Thandi Nkosi.",
+  "intent": "asset_lookup",
+  "classifier": "rules",
+  "slots": {
+    "asset_ref": "AST0001"
+  },
+  "source": "Based on Asset register data as of today.",
+  "chart": null,
+  "table": {
+    "columns": ["changed_on", "event", "employee"],
+    "rows": [
+      {
+        "changed_on": "17 Jul 2026",
+        "event": "Returned",
+        "employee": "Naledi Mokoena"
+      },
+      {
+        "changed_on": "29 Mar 2026",
+        "event": "Assigned",
+        "employee": "Naledi Mokoena"
+      },
+      {
+        "changed_on": "20 Mar 2026",
+        "event": "Assigned",
+        "employee": "Naledi Mokoena"
+      },
+      {
+        "changed_on": "15 Mar 2026",
+        "event": "Registered",
+        "employee": "Naledi Mokoena"
+      }
+    ]
+  },
+  "details": {
+    "title": "AST-0001",
+    "rows": [
+      {
+        "label": "Status",
+        "text": "Assigned"
+      },
+      {
+        "label": "Location",
+        "text": "Umhlanga"
+      },
+      {
+        "label": "Department",
+        "text": "IT"
+      },
+      {
+        "label": "Assigned to",
+        "text": "Thandi Nkosi"
+      },
+      {
+        "label": "Serial number",
+        "text": "NB4DU7GCPH"
+      },
+      {
+        "label": "Purchased",
+        "text": "15 Mar 2026 · R27 200"
+      },
+      {
+        "label": "Warranty",
+        "text": "Ends 07 Nov 2026"
+      },
+      {
+        "label": "Repairs",
+        "text": "1 repair, R2 300 spent"
+      }
+    ]
+  },
+  "dashboard": null,
+  "chips": [
+    {
+      "label": "Full history",
+      "question": "Show the history of AST-0001"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "scope": "out",
+  "answer": "That question falls outside my supported scope — I can only answer from this system's own asset data (cost comparisons, counts by status, overdue confirmations, warranty timelines).",
+  "intent": null,
+  "classifier": "rules",
+  "slots": null,
+  "source": null,
+  "chart": null,
+  "table": null,
+  "dashboard": null,
+  "chips": [
+    {
+      "label": "Warranties expiring",
+      "question": "Which assets go out of warranty next month?"
+    },
+    {
+      "label": "Open AOD value",
+      "question": "What is the open AOD value?"
+    }
+  ],
+  "details": null
+}

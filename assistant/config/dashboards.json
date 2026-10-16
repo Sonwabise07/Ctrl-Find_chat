@@ -1,0 +1,257 @@
+{
+  "dashboards": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "widgets": [
+        {
+          "id": "total",
+          "type": "kpi",
+          "size": "small",
+          "tone": "info",
+          "title": "Total registered assets",
+          "sql": "metrics/total_assets"
+        },
+        {
+          "id": "assigned",
+          "type": "kpi",
+          "size": "small",
+          "tone": "accent",
+          "title": "Assigned assets",
+          "sql": "metrics/assigned_assets"
+        },
+        {
+          "id": "open_repairs",
+          "type": "kpi",
+          "size": "small",
+          "tone": "warn",
+          "title": "Open repair cases",
+          "sql": "metrics/open_repairs"
+        },
+        {
+          "id": "warranty_ended",
+          "type": "kpi",
+          "size": "small",
+          "tone": "danger",
+          "title": "Warranty ended",
+          "sql": "metrics/warranty_ended"
+        },
+        {
+          "id": "by_status",
+          "type": "bars",
+          "size": "medium",
+          "title": "Assets by status",
+          "sql": "metrics/assets_by_status"
+        },
+        {
+          "id": "alerts",
+          "type": "list",
+          "size": "medium",
+          "title": "Upcoming alerts",
+          "sql": "metrics/upcoming_alerts"
+        },
+        {
+          "id": "activity",
+          "type": "table",
+          "size": "full",
+          "title": "Recent activity",
+          "sql": "metrics/recent_activity",
+          "columns": [
+            {
+              "key": "asset",
+              "title": "Asset"
+            },
+            {
+              "key": "event",
+              "title": "Event"
+            },
+            {
+              "key": "employee",
+              "title": "Employee"
+            },
+            {
+              "key": "changed_on",
+              "title": "Date"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "operational",
+      "title": "Operational",
+      "widgets": [
+        {
+          "id": "spare_stock",
+          "type": "bars",
+          "size": "medium",
+          "title": "Spare stock by type",
+          "sql": "metrics/spare_stock_by_type"
+        },
+        {
+          "id": "month_summary",
+          "type": "trends",
+          "size": "medium",
+          "title": "This month against last month",
+          "sql": "metrics/month_summary"
+        },
+        {
+          "id": "purchases",
+          "type": "columns",
+          "size": "medium",
+          "format": "money",
+          "title": "Purchases by month",
+          "sql": "metrics/purchases_by_month"
+        },
+        {
+          "id": "repair_cost",
+          "type": "columns",
+          "size": "medium",
+          "format": "money",
+          "title": "Repair cost by month",
+          "sql": "metrics/repair_cost_by_month"
+        },
+        {
+          "id": "warranty_expiries",
+          "type": "columns",
+          "size": "medium",
+          "title": "Warranties ending, next 6 months",
+          "sql": "metrics/warranty_expiries_by_month"
+        }
+      ]
+    },
+    {
+      "id": "management",
+      "title": "Management",
+      "widgets": [
+        {
+          "id": "unconfirmed",
+          "type": "kpi",
+          "size": "small",
+          "tone": "warn",
+          "title": "Unconfirmed assets",
+          "sql": "metrics/unconfirmed_total",
+          "requires": [
+            "audit_confirmations",
+            "audit_cycles"
+          ]
+        },
+        {
+          "id": "exceptions",
+          "type": "kpi",
+          "size": "small",
+          "tone": "danger",
+          "title": "Audit exceptions",
+          "sql": "metrics/audit_exceptions_total",
+          "requires": [
+            "audit_confirmations",
+            "audit_cycles"
+          ]
+        },
+        {
+          "id": "open_aod",
+          "type": "kpi",
+          "size": "small",
+          "tone": "accent",
+          "format": "money",
+          "title": "Open AOD value",
+          "sql": "metrics/open_aod_value",
+          "requires": [
+            "aod_records"
+          ]
+        },
+        {
+          "id": "warranty_ended",
+          "type": "kpi",
+          "size": "small",
+          "tone": "info",
+          "title": "Warranty ended",
+          "sql": "metrics/warranty_ended"
+        },
+        {
+          "id": "value_by_department",
+          "type": "bars",
+          "size": "medium",
+          "format": "money",
+          "title": "Purchase value by department",
+          "sql": "metrics/value_by_department"
+        },
+        {
+          "id": "by_location",
+          "type": "bars",
+          "size": "medium",
+          "title": "Assets by location",
+          "sql": "metrics/assets_by_location"
+        },
+        {
+          "id": "audit_exceptions",
+          "type": "bars",
+          "size": "medium",
+          "title": "Audit exceptions by location",
+          "sql": "audit_exceptions_by_location",
+          "requires": [
+            "audit_confirmations",
+            "audit_cycles"
+          ]
+        },
+        {
+          "id": "financial_exposure",
+          "type": "keyvalue",
+          "size": "medium",
+          "title": "Financial exposure",
+          "sql": "metrics/financial_exposure",
+          "requires": [
+            "aod_records"
+          ]
+        }
+      ]
+    }
+  ],
+  "chart_topics": [
+    {
+      "id": "operational.repair_cost",
+      "words": "repair|maintenance|fault",
+      "after": [
+        "maintenance_cost_by_period",
+        "maintenance_open"
+      ],
+      "source": "Repairs data"
+    },
+    {
+      "id": "management.value_by_department",
+      "words": "purchase value|value by department|worth",
+      "after": [],
+      "source": "Asset register data (purchase price)"
+    },
+    {
+      "id": "operational.purchases",
+      "words": "purchase|spend|spent|bought|buying|cost",
+      "after": [
+        "spend_by_period"
+      ],
+      "source": "Asset register data (purchase price and date)"
+    },
+    {
+      "id": "operational.warranty_expiries",
+      "words": "warrant|expir",
+      "after": [
+        "warranty_assets"
+      ],
+      "source": "Warranty data"
+    },
+    {
+      "id": "management.audit_exceptions",
+      "words": "exception",
+      "after": [
+        "audit_exceptions_by_location"
+      ],
+      "source": "Audit & risk data"
+    },
+    {
+      "id": "operational.spare_stock",
+      "words": "spare|stock",
+      "after": [],
+      "source": "Asset register data"
+    }
+  ]
+}

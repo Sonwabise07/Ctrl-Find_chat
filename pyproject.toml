@@ -1,0 +1,10 @@
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["local_only: needs the in-process server, so it is skipped when ASSISTANT_URL is set"]

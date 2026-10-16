@@ -1,0 +1,14 @@
+[
+  {
+    "id": "overview",
+    "title": "Overview"
+  },
+  {
+    "id": "operational",
+    "title": "Operational"
+  },
+  {
+    "id": "management",
+    "title": "Management"
+  }
+]

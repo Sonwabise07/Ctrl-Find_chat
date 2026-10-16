@@ -1,0 +1,20 @@
+/* Asset Hub design tokens. In the main system, map these to the shared theme. */
+:root {
+  --navy: #131038;
+  --navy-active: #171345;
+  --blue: #1e9ae0;
+  --purple: #6c3fb5;
+  --green: #22a06b;
+  --amber: #e0a13a;
+  --red: #d64545;
+  --page: #f2f3f7;
+  --card: #fbfbfd;
+  --line: #dfe2ee;
+  --track: #e4e7f1;
+  --ink: #14113c;
+  --muted: #8a90b5;
+  --info-bg: #e9f5fc;
+  --info-text: #1b78b0;
+  --radius: 14px;
+  --font: Inter, 'Segoe UI', system-ui, -apple-system, sans-serif;
+}

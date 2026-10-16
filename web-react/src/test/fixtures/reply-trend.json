@@ -1,0 +1,80 @@
+{
+  "scope": "in",
+  "answer": "Here is the trend for **Purchases by month**. The highest month is Sep 26 at **R122 100**.",
+  "intent": "show_chart",
+  "classifier": "rules",
+  "slots": {
+    "chart": "operational.purchases"
+  },
+  "source": "Based on Asset register data (purchase price and date) as of today.",
+  "chart": {
+    "rows": [
+      {
+        "label": "Nov 25",
+        "value": 0,
+        "text": "R0"
+      },
+      {
+        "label": "Dec 25",
+        "value": 31450,
+        "text": "R31 450"
+      },
+      {
+        "label": "Jan 26",
+        "value": 0,
+        "text": "R0"
+      },
+      {
+        "label": "Feb 26",
+        "value": 14200,
+        "text": "R14 200"
+      },
+      {
+        "label": "Mar 26",
+        "value": 27200,
+        "text": "R27 200"
+      },
+      {
+        "label": "Apr 26",
+        "value": 0,
+        "text": "R0"
+      },
+      {
+        "label": "May 26",
+        "value": 33950,
+        "text": "R33 950"
+      },
+      {
+        "label": "Jun 26",
+        "value": 0,
+        "text": "R0"
+      },
+      {
+        "label": "Jul 26",
+        "value": 33400,
+        "text": "R33 400"
+      },
+      {
+        "label": "Aug 26",
+        "value": 0,
+        "text": "R0"
+      },
+      {
+        "label": "Sep 26",
+        "value": 122100,
+        "text": "R122 100"
+      },
+      {
+        "label": "Oct 26",
+        "value": 63150,
+        "text": "R63 150"
+      }
+    ],
+    "note": "Purchases by month",
+    "kind": "columns"
+  },
+  "table": null,
+  "dashboard": null,
+  "chips": [],
+  "details": null
+}

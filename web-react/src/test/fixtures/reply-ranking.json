@@ -1,0 +1,44 @@
+{
+  "scope": "in",
+  "answer": "**Midrand DC** has the most laptops, with **6**, ahead of Sandton HQ (4) and Umhlanga (4).",
+  "intent": "ranking",
+  "classifier": "rules",
+  "slots": {
+    "asset_type": "Laptop",
+    "group_by": "location",
+    "rank_order": "desc",
+    "rank_metric": "count",
+    "rank_limit": 5
+  },
+  "source": "Based on Asset register data as of today.",
+  "chart": {
+    "rows": [
+      {
+        "label": "Midrand DC",
+        "value": 6.0,
+        "text": "6"
+      },
+      {
+        "label": "Sandton HQ",
+        "value": 4.0,
+        "text": "4"
+      },
+      {
+        "label": "Umhlanga",
+        "value": 4.0,
+        "text": "4"
+      },
+      {
+        "label": "East London",
+        "value": 2.0,
+        "text": "2"
+      }
+    ],
+    "note": "Highest asset count by location",
+    "kind": "bars"
+  },
+  "table": null,
+  "details": null,
+  "dashboard": null,
+  "chips": []
+}

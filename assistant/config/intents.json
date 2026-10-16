@@ -1,0 +1,504 @@
+{
+  "categories": [
+    {
+      "label": "Cost comparisons between periods",
+      "intents": [
+        "spend_by_period",
+        "maintenance_cost_by_period"
+      ]
+    },
+    {
+      "label": "Counts by status or lifecycle state",
+      "intents": [
+        "count_assets",
+        "breakdown_assets",
+        "list_assets"
+      ]
+    },
+    {
+      "label": "Overdue confirmations",
+      "intents": [
+        "unconfirmed_assets",
+        "overdue_confirmations"
+      ]
+    },
+    {
+      "label": "Warranty timelines",
+      "intents": [
+        "warranty_assets"
+      ]
+    },
+    {
+      "label": "Open repairs and maintenance",
+      "intents": [
+        "maintenance_open"
+      ]
+    },
+    {
+      "label": "Audit exceptions and open AOD value",
+      "intents": [
+        "audit_exceptions_by_location",
+        "open_aod_value"
+      ]
+    },
+    {
+      "label": "Who holds which asset",
+      "intents": [
+        "assets_of_person"
+      ]
+    },
+    {
+      "label": "Dashboards and charts",
+      "intents": [
+        "list_dashboards",
+        "open_dashboard",
+        "show_chart"
+      ]
+    },
+    {
+      "label": "Find an asset by number",
+      "intents": [
+        "asset_lookup"
+      ]
+    },
+    {
+      "label": "Rankings: most, fewest, top N",
+      "intents": [
+        "ranking"
+      ]
+    },
+    {
+      "label": "Date ranges and asset age",
+      "intents": [
+        "purchases_in_period",
+        "repairs_in_period"
+      ]
+    },
+    {
+      "label": "Your assets and your team's",
+      "intents": [
+        "my_assets",
+        "team_assets"
+      ]
+    },
+    {
+      "label": "Full history of an asset",
+      "intents": [
+        "asset_timeline"
+      ]
+    },
+    {
+      "label": "Assets still held by people who left",
+      "intents": [
+        "unrecovered_assets"
+      ]
+    },
+    {
+      "label": "Loss, theft and AOD cases",
+      "intents": [
+        "open_loss_cases",
+        "aod_cases"
+      ]
+    },
+    {
+      "label": "Laptop age and warranty",
+      "intents": [
+        "laptop_ages"
+      ]
+    }
+  ],
+  "intents": {
+    "count_assets": {
+      "slots": [
+        "asset_type",
+        "status",
+        "location",
+        "department",
+        "make"
+      ],
+      "source": "Asset register data",
+      "requires": [],
+      "example": "How many laptops are available?"
+    },
+    "breakdown_assets": {
+      "slots": [
+        "group_by",
+        "asset_type",
+        "status",
+        "location",
+        "department",
+        "make"
+      ],
+      "source": "Asset register data",
+      "requires": [],
+      "example": "Show assets by status"
+    },
+    "list_assets": {
+      "slots": [
+        "asset_type",
+        "status",
+        "location",
+        "department",
+        "make"
+      ],
+      "source": "Asset register data",
+      "requires": [],
+      "example": "Show me the available monitors",
+      "columns": [
+        "asset_no",
+        "description",
+        "status",
+        "location",
+        "assigned_to"
+      ]
+    },
+    "warranty_assets": {
+      "slots": [
+        "window",
+        "asset_type"
+      ],
+      "source": "Warranty data",
+      "requires": [],
+      "example": "Which assets go out of warranty next month?",
+      "columns": [
+        "asset_no",
+        "description",
+        "location",
+        "assigned_to",
+        "warranty_end"
+      ],
+      "uses_dates": true
+    },
+    "spend_by_period": {
+      "slots": [
+        "period"
+      ],
+      "source": "Asset register data (purchase price and date)",
+      "requires": [],
+      "example": "Compare purchase spend this month and last month",
+      "uses_dates": true
+    },
+    "maintenance_cost_by_period": {
+      "slots": [
+        "period"
+      ],
+      "source": "Repairs data",
+      "requires": [],
+      "example": "Compare repair costs this month and last month",
+      "uses_dates": true
+    },
+    "maintenance_open": {
+      "slots": [],
+      "source": "Repairs data",
+      "requires": [],
+      "example": "Show open repair cases",
+      "columns": [
+        "asset_no",
+        "description",
+        "issue",
+        "status",
+        "reported",
+        "supplier"
+      ]
+    },
+    "assets_of_person": {
+      "slots": [
+        "person"
+      ],
+      "source": "Assignment data",
+      "requires": [],
+      "example": "What does Thandi Nkosi have?",
+      "columns": [
+        "asset_no",
+        "description",
+        "status",
+        "location",
+        "warranty_end"
+      ]
+    },
+    "unconfirmed_assets": {
+      "slots": [
+        "asset_type"
+      ],
+      "source": "Audit & risk data",
+      "requires": [
+        "audit_confirmations",
+        "audit_cycles"
+      ],
+      "example": "How many laptops are currently unconfirmed?",
+      "columns": [
+        "asset_no",
+        "description",
+        "holder",
+        "due"
+      ]
+    },
+    "overdue_confirmations": {
+      "slots": [
+        "asset_type"
+      ],
+      "source": "Audit & risk data",
+      "requires": [
+        "audit_confirmations",
+        "audit_cycles"
+      ],
+      "example": "Which confirmations are overdue?",
+      "columns": [
+        "asset_no",
+        "description",
+        "holder",
+        "due"
+      ]
+    },
+    "audit_exceptions_by_location": {
+      "slots": [],
+      "source": "Audit & risk data",
+      "requires": [
+        "audit_confirmations",
+        "audit_cycles"
+      ],
+      "example": "Which office has the most audit exceptions?"
+    },
+    "open_aod_value": {
+      "slots": [],
+      "source": "Loss, theft & AOD data",
+      "requires": [
+        "aod_records"
+      ],
+      "example": "What is the open AOD value?"
+    },
+    "list_dashboards": {
+      "slots": [],
+      "source": "Dashboards",
+      "requires": [],
+      "example": "What dashboards are there?"
+    },
+    "open_dashboard": {
+      "slots": [
+        "dashboard"
+      ],
+      "source": "Dashboards",
+      "requires": [],
+      "example": "Open the Operational dashboard"
+    },
+    "show_chart": {
+      "slots": [
+        "chart"
+      ],
+      "source": "Charts",
+      "requires": [],
+      "example": "Show purchases as a chart",
+      "uses_dates": true
+    },
+    "asset_lookup": {
+      "slots": [],
+      "source": "Asset register data",
+      "requires": [],
+      "example": "Tell me about AST-0013",
+      "columns": [
+        "changed_on",
+        "event",
+        "employee"
+      ]
+    },
+    "ranking": {
+      "slots": [
+        "group_by",
+        "asset_type",
+        "status",
+        "location",
+        "department",
+        "make"
+      ],
+      "source": "Asset register data",
+      "requires": [],
+      "example": "Which location has the most laptops?"
+    },
+    "purchases_in_period": {
+      "slots": [
+        "asset_type",
+        "status",
+        "location",
+        "department",
+        "make"
+      ],
+      "source": "Asset register data (purchase price and date)",
+      "requires": [],
+      "example": "What did we buy in the last 90 days?",
+      "columns": [
+        "asset_no",
+        "description",
+        "purchased",
+        "price"
+      ],
+      "uses_dates": true,
+      "needs_date_range": true
+    },
+    "repairs_in_period": {
+      "slots": [
+        "asset_type",
+        "location",
+        "department",
+        "make"
+      ],
+      "source": "Repairs data",
+      "requires": [],
+      "example": "How many repairs were reported in the last 30 days?",
+      "columns": [
+        "asset_no",
+        "issue",
+        "status",
+        "reported",
+        "cost"
+      ],
+      "uses_dates": true,
+      "needs_date_range": true
+    },
+    "my_assets": {
+      "slots": [
+        "asset_type",
+        "status",
+        "location",
+        "make"
+      ],
+      "source": "Assignment data",
+      "requires": [],
+      "example": "What am I responsible for?",
+      "columns": [
+        "asset_no",
+        "description",
+        "status",
+        "location",
+        "warranty_end"
+      ]
+    },
+    "team_assets": {
+      "slots": [
+        "asset_type",
+        "status",
+        "location",
+        "department",
+        "make"
+      ],
+      "source": "Asset register data",
+      "requires": [],
+      "example": "Show my team's assets",
+      "columns": [
+        "asset_no",
+        "description",
+        "status",
+        "location",
+        "assigned_to"
+      ]
+    },
+    "asset_timeline": {
+      "slots": [],
+      "source": "Asset history",
+      "requires": [],
+      "example": "Show the history of AST-0013",
+      "columns": [
+        "occurred",
+        "event",
+        "detail",
+        "done_by"
+      ],
+      "optional": [
+        {
+          "sql": "fragments/timeline_confirmations",
+          "requires": [
+            "audit_confirmations",
+            "audit_cycles"
+          ]
+        },
+        {
+          "sql": "fragments/timeline_losses",
+          "requires": [
+            "loss_cases"
+          ]
+        }
+      ]
+    },
+    "unrecovered_assets": {
+      "slots": [
+        "asset_type",
+        "location",
+        "department"
+      ],
+      "source": "Assignment data (people marked inactive)",
+      "requires": [],
+      "example": "Which assets are still held by people who have left?",
+      "columns": [
+        "asset_no",
+        "description",
+        "holder",
+        "status",
+        "location"
+      ]
+    },
+    "open_loss_cases": {
+      "slots": [],
+      "source": "Loss, theft & AOD data",
+      "requires": [
+        "loss_cases"
+      ],
+      "example": "Show open loss and theft cases",
+      "columns": [
+        "asset_no",
+        "description",
+        "case_type",
+        "negligence",
+        "reported",
+        "employee"
+      ]
+    },
+    "aod_cases": {
+      "slots": [],
+      "source": "Loss, theft & AOD data",
+      "requires": [
+        "aod_records"
+      ],
+      "example": "Who has an open AOD?",
+      "columns": [
+        "asset_no",
+        "description",
+        "employee",
+        "amount",
+        "raised"
+      ]
+    },
+    "laptop_ages": {
+      "slots": [
+        "location",
+        "department"
+      ],
+      "source": "Asset register data (purchase and warranty dates)",
+      "requires": [],
+      "example": "How old are our laptops?",
+      "columns": [
+        "asset_no",
+        "holder",
+        "purchased",
+        "age",
+        "warranty"
+      ]
+    }
+  },
+  "chips": [
+    {
+      "label": "Warranties expiring",
+      "question": "Which assets go out of warranty next month?"
+    },
+    {
+      "label": "Open AOD value",
+      "question": "What is the open AOD value?"
+    },
+    {
+      "label": "Spare stock",
+      "question": "Show spare stock by type"
+    },
+    {
+      "label": "Show dashboards",
+      "question": "What dashboards are there?"
+    }
+  ]
+}

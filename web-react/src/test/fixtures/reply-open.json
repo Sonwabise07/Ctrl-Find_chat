@@ -1,0 +1,258 @@
+{
+  "scope": "in",
+  "answer": "Here is the **Operational** dashboard.",
+  "intent": "open_dashboard",
+  "classifier": "rules",
+  "slots": {
+    "dashboard": "operational"
+  },
+  "source": "Dashboards use the same data and the same access rules as the assistant.",
+  "chart": null,
+  "table": null,
+  "dashboard": {
+    "id": "operational",
+    "title": "Operational",
+    "widgets": [
+      {
+        "id": "spare_stock",
+        "type": "bars",
+        "title": "Spare stock by type",
+        "size": "medium",
+        "available": true,
+        "data": {
+          "total": 9,
+          "rows": [
+            {
+              "label": "Laptop",
+              "value": 3,
+              "text": "3",
+              "share": 33.3
+            },
+            {
+              "label": "Monitor",
+              "value": 3,
+              "text": "3",
+              "share": 33.3
+            },
+            {
+              "label": "Desktop",
+              "value": 1,
+              "text": "1",
+              "share": 11.1
+            },
+            {
+              "label": "Network Equipment",
+              "value": 1,
+              "text": "1",
+              "share": 11.1
+            },
+            {
+              "label": "Printer",
+              "value": 1,
+              "text": "1",
+              "share": 11.1
+            }
+          ]
+        }
+      },
+      {
+        "id": "month_summary",
+        "type": "trends",
+        "title": "This month against last month",
+        "size": "medium",
+        "available": true,
+        "data": {
+          "rows": [
+            {
+              "label": "New assets registered",
+              "text": "42",
+              "previous_text": "0",
+              "direction": "up",
+              "change": "new this month",
+              "tone": "good"
+            },
+            {
+              "label": "Purchase spend",
+              "text": "R63 150",
+              "previous_text": "R122 100",
+              "direction": "down",
+              "change": "-48%",
+              "tone": "neutral"
+            },
+            {
+              "label": "Repairs reported",
+              "text": "4",
+              "previous_text": "4",
+              "direction": "flat",
+              "change": "no change",
+              "tone": "neutral"
+            },
+            {
+              "label": "Repair cost",
+              "text": "R3 750",
+              "previous_text": "R11 600",
+              "direction": "down",
+              "change": "-68%",
+              "tone": "good"
+            }
+          ]
+        }
+      },
+      {
+        "id": "purchases",
+        "type": "columns",
+        "title": "Purchases by month",
+        "size": "medium",
+        "available": true,
+        "data": {
+          "rows": [
+            {
+              "label": "Nov 25",
+              "value": 0,
+              "text": "R0"
+            },
+            {
+              "label": "Dec 25",
+              "value": 31450,
+              "text": "R31 450"
+            },
+            {
+              "label": "Jan 26",
+              "value": 0,
+              "text": "R0"
+            },
+            {
+              "label": "Feb 26",
+              "value": 14200,
+              "text": "R14 200"
+            },
+            {
+              "label": "Mar 26",
+              "value": 27200,
+              "text": "R27 200"
+            },
+            {
+              "label": "Apr 26",
+              "value": 0,
+              "text": "R0"
+            },
+            {
+              "label": "May 26",
+              "value": 33950,
+              "text": "R33 950"
+            },
+            {
+              "label": "Jun 26",
+              "value": 0,
+              "text": "R0"
+            },
+            {
+              "label": "Jul 26",
+              "value": 33400,
+              "text": "R33 400"
+            },
+            {
+              "label": "Aug 26",
+              "value": 0,
+              "text": "R0"
+            },
+            {
+              "label": "Sep 26",
+              "value": 122100,
+              "text": "R122 100"
+            },
+            {
+              "label": "Oct 26",
+              "value": 63150,
+              "text": "R63 150"
+            }
+          ]
+        }
+      },
+      {
+        "id": "repair_cost",
+        "type": "columns",
+        "title": "Repair cost by month",
+        "size": "medium",
+        "available": true,
+        "data": {
+          "rows": [
+            {
+              "label": "May 26",
+              "value": 0,
+              "text": "R0"
+            },
+            {
+              "label": "Jun 26",
+              "value": 0,
+              "text": "R0"
+            },
+            {
+              "label": "Jul 26",
+              "value": 0,
+              "text": "R0"
+            },
+            {
+              "label": "Aug 26",
+              "value": 0,
+              "text": "R0"
+            },
+            {
+              "label": "Sep 26",
+              "value": 11600,
+              "text": "R11 600"
+            },
+            {
+              "label": "Oct 26",
+              "value": 3750,
+              "text": "R3 750"
+            }
+          ]
+        }
+      },
+      {
+        "id": "warranty_expiries",
+        "type": "columns",
+        "title": "Warranties ending, next 6 months",
+        "size": "medium",
+        "available": true,
+        "data": {
+          "rows": [
+            {
+              "label": "Oct 26",
+              "value": 1,
+              "text": "1"
+            },
+            {
+              "label": "Nov 26",
+              "value": 4,
+              "text": "4"
+            },
+            {
+              "label": "Dec 26",
+              "value": 1,
+              "text": "1"
+            },
+            {
+              "label": "Jan 27",
+              "value": 0,
+              "text": "0"
+            },
+            {
+              "label": "Feb 27",
+              "value": 0,
+              "text": "0"
+            },
+            {
+              "label": "Mar 27",
+              "value": 0,
+              "text": "0"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "chips": [],
+  "details": null
+}

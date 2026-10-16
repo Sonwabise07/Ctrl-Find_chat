@@ -1,0 +1,201 @@
+{
+  "id": "management",
+  "title": "Management",
+  "widgets": [
+    {
+      "id": "unconfirmed",
+      "type": "kpi",
+      "title": "Unconfirmed assets",
+      "size": "small",
+      "tone": "warn",
+      "available": true,
+      "data": {
+        "value": 10,
+        "text": "10",
+        "tag": "5 overdue"
+      }
+    },
+    {
+      "id": "exceptions",
+      "type": "kpi",
+      "title": "Audit exceptions",
+      "size": "small",
+      "tone": "danger",
+      "available": true,
+      "data": {
+        "value": 5,
+        "text": "5",
+        "tag": "4 locations"
+      }
+    },
+    {
+      "id": "open_aod",
+      "type": "kpi",
+      "title": "Open AOD value",
+      "size": "small",
+      "tone": "accent",
+      "available": true,
+      "data": {
+        "value": 22300,
+        "text": "R22 300",
+        "tag": "2 open records"
+      }
+    },
+    {
+      "id": "warranty_ended",
+      "type": "kpi",
+      "title": "Warranty ended",
+      "size": "small",
+      "tone": "info",
+      "available": true,
+      "data": {
+        "value": 3,
+        "text": "3",
+        "tag": "2 end within 30 days"
+      }
+    },
+    {
+      "id": "value_by_department",
+      "type": "bars",
+      "title": "Purchase value by department",
+      "size": "medium",
+      "available": true,
+      "data": {
+        "total": 716400,
+        "rows": [
+          {
+            "label": "No department",
+            "value": 289250,
+            "text": "R289 250",
+            "share": 40.4
+          },
+          {
+            "label": "Sales",
+            "value": 161100,
+            "text": "R161 100",
+            "share": 22.5
+          },
+          {
+            "label": "Finance",
+            "value": 92300,
+            "text": "R92 300",
+            "share": 12.9
+          },
+          {
+            "label": "IT",
+            "value": 65950,
+            "text": "R65 950",
+            "share": 9.2
+          },
+          {
+            "label": "Operations",
+            "value": 63550,
+            "text": "R63 550",
+            "share": 8.9
+          },
+          {
+            "label": "HR",
+            "value": 44250,
+            "text": "R44 250",
+            "share": 6.2
+          }
+        ]
+      }
+    },
+    {
+      "id": "by_location",
+      "type": "bars",
+      "title": "Assets by location",
+      "size": "medium",
+      "available": true,
+      "data": {
+        "total": 42,
+        "rows": [
+          {
+            "label": "Midrand DC",
+            "value": 14,
+            "text": "14",
+            "share": 33.3
+          },
+          {
+            "label": "Sandton HQ",
+            "value": 12,
+            "text": "12",
+            "share": 28.6
+          },
+          {
+            "label": "Umhlanga",
+            "value": 9,
+            "text": "9",
+            "share": 21.4
+          },
+          {
+            "label": "East London",
+            "value": 7,
+            "text": "7",
+            "share": 16.7
+          }
+        ]
+      }
+    },
+    {
+      "id": "audit_exceptions",
+      "type": "bars",
+      "title": "Audit exceptions by location",
+      "size": "medium",
+      "available": true,
+      "data": {
+        "total": 5,
+        "rows": [
+          {
+            "label": "Sandton HQ",
+            "value": 2,
+            "text": "2",
+            "share": 40.0
+          },
+          {
+            "label": "East London",
+            "value": 1,
+            "text": "1",
+            "share": 20.0
+          },
+          {
+            "label": "Midrand DC",
+            "value": 1,
+            "text": "1",
+            "share": 20.0
+          },
+          {
+            "label": "Umhlanga",
+            "value": 1,
+            "text": "1",
+            "share": 20.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "financial_exposure",
+      "type": "keyvalue",
+      "title": "Financial exposure",
+      "size": "medium",
+      "available": true,
+      "data": {
+        "rows": [
+          {
+            "label": "Open AOD value",
+            "text": "R22 300"
+          },
+          {
+            "label": "Open AOD records",
+            "text": "2"
+          },
+          {
+            "label": "Purchase value of assets past warranty",
+            "text": "R30 400"
+          }
+        ]
+      }
+    }
+  ]
+}

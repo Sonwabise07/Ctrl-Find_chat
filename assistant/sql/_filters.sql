@@ -1,0 +1,6 @@
+(%(asset_type)s::text IS NULL OR t.name = %(asset_type)s)
+AND (%(status)s::text IS NULL OR s.name = %(status)s)
+AND (%(location)s::text IS NULL OR l.name = %(location)s)
+AND (%(department)s::text IS NULL OR d.name = %(department)s)
+AND (%(make)s::text IS NULL OR a.description ILIKE %(make)s || '%%')
+AND (%(older_than)s::int IS NULL OR a.purchase_date <= CURRENT_DATE - make_interval(months => %(older_than)s::int))

@@ -1,0 +1,278 @@
+{
+  "blocked": "head ?count|how many (employees|staff|people)|salary|salaries|payroll|depreciat|valuation|book value|weather|share price|revenue|leave balance",
+  "people": "head ?count|employees|staff|people|salary|salaries|payroll|leave",
+  "asset_nouns": "\\b(assets?|laptops?|notebooks?|monitors?|screens?|displays?|desktops?|pcs?|phones?|mobiles?|tablets?|ipads?|printers?|devices?|equipment|stock|inventory|switch(es)?|routers?|macbooks?)\\b",
+  "phrases": {
+    "spare": "spare|stock",
+    "how_many": "how many",
+    "count": "how many|count|number of|total",
+    "list": "\\b(show|list|which|what|give|display|find|see|all)\\b",
+    "holds": "\\b(have|has|assigned|holds?|using|owns?|issued|with)\\b",
+    "dashboard": "dashboards?",
+    "chart": "\\b(charts?|graphs?|plot|plotted|trends?|visuali[sz]e|visuali[sz]ation|over time|per month|by month|monthly)\\b",
+    "compare": "\\b(compare|compared|versus|vs|against|than|more|less|difference)\\b",
+    "repair_words": "repair|maintenance|fault|fixed|fix",
+    "purchase_words": "bought|buy|purchas|acquir|spend|spent|paid|cost",
+    "timeline": "\\b(history|timeline|what happened|events?|log|trail|changes)\\b",
+    "this_asset": "\\b(its|this|that|it)\\b"
+  },
+  "routes": [
+    {
+      "intent": "show_chart",
+      "all": [
+        "\\b(charts?|graphs?|plot|plotted|trends?|visuali[sz]e|visuali[sz]ation|over time|per month|by month|monthly)\\b"
+      ]
+    },
+    {
+      "intent": "aod_cases",
+      "all": [
+        "\\baod\\b|acknowledg(e)?ment of debt",
+        "\\b(cases?|who|list|owe[sd]?|employees?|people|records?|outstanding)\\b"
+      ]
+    },
+    {
+      "intent": "open_aod_value",
+      "all": [
+        "\\baod\\b|acknowledg(e)?ment of debt"
+      ]
+    },
+    {
+      "intent": "unconfirmed_assets",
+      "all": [
+        "unconfirmed|not (yet )?confirmed|pending confirm|awaiting confirm|no reply|not (yet )?responded|yet to confirm|outstanding confirm"
+      ]
+    },
+    {
+      "intent": "overdue_confirmations",
+      "all": [
+        "overdue",
+        "confirm"
+      ]
+    },
+    {
+      "intent": "audit_exceptions_by_location",
+      "all": [
+        "exception"
+      ]
+    },
+    {
+      "intent": "warranty_assets",
+      "all": [
+        "warrant"
+      ]
+    },
+    {
+      "intent": "maintenance_cost_by_period",
+      "all": [
+        "spend|spent|cost|purchases|bought|compare",
+        "repair|maintenance"
+      ]
+    },
+    {
+      "intent": "spend_by_period",
+      "all": [
+        "spend|spent|cost|purchases|bought|acquisition"
+      ]
+    },
+    {
+      "intent": "maintenance_open",
+      "all": [
+        "\\b(cases?|records?|tickets?|faults?|open (repairs?|maintenance)|jobs?)\\b",
+        "repair|maintenance|fault"
+      ]
+    },
+    {
+      "intent": "team_assets",
+      "all": [
+        "\\b(my|our)\\s+(team|department|dept)\\b"
+      ]
+    },
+    {
+      "intent": "my_assets",
+      "all": [
+        "\\bmy\\s+(assets?|laptops?|monitors?|desktops?|phones?|tablets?|printers?|devices?|equipment|kit)\\b|\\bassigned to me\\b|\\bwhat (do|am) i (have|hold|own|responsible)\\b|\\bwhat am i responsible for\\b"
+      ]
+    },
+    {
+      "intent": "open_loss_cases",
+      "all": [
+        "\\b(stolen|thefts?|loss(?:es)?|incidents?)\\b"
+      ]
+    },
+    {
+      "intent": "unrecovered_assets",
+      "all": [
+        "\\b(left|leavers?|leaving|inactive|former|exited|offboard\\w*|resigned|departed|no longer (?:with|employed|working))\\b",
+        "\\b(assets?|laptops?|equipment|devices?|kit|recover\\w*|return\\w*|held|hold|assigned)\\b"
+      ]
+    },
+    {
+      "intent": "laptop_ages",
+      "all": [
+        "\\b(how old|laptop ages?|ages? of (?:our |the )?laptops|laptop health|health of (?:our |the )?laptops|ageing laptops|aging laptops)\\b"
+      ]
+    }
+  ],
+  "types": {
+    "Laptop": {
+      "pattern": "laptops?|notebooks?|macbooks?",
+      "noun": "laptop"
+    },
+    "Monitor": {
+      "pattern": "monitors?|screens?|displays?",
+      "noun": "monitor"
+    },
+    "Desktop": {
+      "pattern": "desktops?|pcs?",
+      "noun": "desktop"
+    },
+    "Mobile Phone": {
+      "pattern": "phones?|mobiles?|cell ?phones?",
+      "noun": "mobile phone"
+    },
+    "Tablet": {
+      "pattern": "tablets?|ipads?",
+      "noun": "tablet"
+    },
+    "Printer": {
+      "pattern": "printers?",
+      "noun": "printer"
+    },
+    "Network Equipment": {
+      "pattern": "network|switch(es)?|routers?|access points?",
+      "noun": "network device"
+    },
+    "Other": {
+      "pattern": "\\bother assets?\\b",
+      "noun": "other asset"
+    }
+  },
+  "statuses": {
+    "In Maintenance": {
+      "pattern": "in maintenance|in repair|under repair|being repaired|faulty|broken|being fixed",
+      "phrase": "in maintenance"
+    },
+    "Available": {
+      "pattern": "available|spare|in stock|unassigned|free",
+      "phrase": "available"
+    },
+    "Assigned": {
+      "pattern": "assigned|in use|issued",
+      "phrase": "assigned"
+    },
+    "Retired": {
+      "pattern": "retired|decommissioned",
+      "phrase": "retired"
+    },
+    "Lost": {
+      "pattern": "\\blost\\b|missing",
+      "phrase": "lost"
+    }
+  },
+  "makes": [
+    "dell",
+    "macbook",
+    "apple",
+    "samsung",
+    "hp",
+    "canon",
+    "cisco",
+    "ubiquiti"
+  ],
+  "months": [
+    "january",
+    "february",
+    "march",
+    "april",
+    "may",
+    "june",
+    "july",
+    "august",
+    "september",
+    "october",
+    "november",
+    "december"
+  ],
+  "warranty_windows": [
+    [
+      "next month",
+      "next_month"
+    ],
+    [
+      "this month",
+      "this_month"
+    ],
+    [
+      "90 days|3 months|three months|quarter",
+      "days:90"
+    ],
+    [
+      "\\bgo(es|ing)? out of warranty|fall(s|ing)? out of warranty|about to (expire|run out)|expiring|expire soon",
+      "days:30"
+    ],
+    [
+      "out of warranty|expired|no longer under warranty|lapsed|past warranty",
+      "expired"
+    ],
+    [
+      "warrant|expir",
+      "days:30"
+    ]
+  ],
+  "group_by": [
+    [
+      "by status|per status|each status|lifecycle",
+      "status"
+    ],
+    [
+      "by (asset )?type|per type|each type|by category|asset types?|types of assets?|what types|asset categories",
+      "type"
+    ],
+    [
+      "by (location|office)|per (location|office)|each (location|office)",
+      "location"
+    ],
+    [
+      "by department|per department|each department",
+      "department"
+    ]
+  ],
+  "messages": {
+    "out_of_scope": "That question falls outside my supported scope — I can only answer from this system's own asset data (cost comparisons, counts by status, overdue confirmations, warranty timelines).",
+    "people_hint": " Try Oracle or HR reporting for headcount.",
+    "not_held": "That information isn't held in this system yet, so I can't answer it rather than guess.",
+    "person_not_found": "I couldn't find that person in this system. Try their full name.",
+    "unknown_entity": "I don't have a location or department called “{name}” in this system. I can answer for: {locations}.",
+    "number_check_failed": "I found matching records but could not present the figures safely, so I am showing the data only.",
+    "chart_unknown": "Tell me what to chart, for example purchases, repair costs, warranties ending, spare stock or assets by location. After any answer you can also say \"show this as a chart\".",
+    "asset_ref_missing": "Which asset? Give me an asset number such as AST-0013, or a serial number.",
+    "date_range_missing": "Tell me the period, for example the last 90 days, this year or between July and September.",
+    "date_unsupported": "I can't filter that by date yet. I can show what was bought, or what was repaired, in a period, for example \"What did we buy in the last 90 days?\"",
+    "team_unknown": "I can't tell which team you belong to, so I can't show your team's assets."
+  },
+  "ranking": {
+    "highest": "most|highest|largest|biggest|greatest|top",
+    "lowest": "least|fewest|lowest|smallest|bottom",
+    "value": "value|worth|cost|costs|costly|spend|spent|price|expensive|priciest",
+    "limit": "(?:top|bottom|first)\\s+(\\d+|one|two|three|four|five|six|seven|eight|nine|ten)\\b",
+    "dimensions": [
+      [
+        "locations?|offices?|sites?|branch(?:es)?",
+        "location"
+      ],
+      [
+        "departments?|teams?",
+        "department"
+      ],
+      [
+        "types?|categories|category|kinds?",
+        "type"
+      ],
+      [
+        "statuses|status",
+        "status"
+      ]
+    ],
+    "blockers": "exception|warrant|repair|maintenance|confirm|aod|dashboard|chart|graph|trend"
+  }
+}

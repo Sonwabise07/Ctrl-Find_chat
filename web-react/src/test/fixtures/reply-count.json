@@ -1,0 +1,16 @@
+{
+  "scope": "in",
+  "answer": "**3 laptops** are available.",
+  "intent": "count_assets",
+  "classifier": "rules",
+  "slots": {
+    "asset_type": "Laptop",
+    "status": "Available"
+  },
+  "source": "Based on Asset register data as of today.",
+  "chart": null,
+  "table": null,
+  "dashboard": null,
+  "chips": [],
+  "details": null
+}

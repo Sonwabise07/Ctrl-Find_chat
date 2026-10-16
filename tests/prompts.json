@@ -1,0 +1,697 @@
+[
+  {
+    "group": "Counts",
+    "prompts": [
+      {
+        "q": "How many laptops are available?",
+        "scope": "in",
+        "intent": "count_assets"
+      },
+      {
+        "q": "How many monitors do we have?",
+        "scope": "in",
+        "intent": "count_assets"
+      },
+      {
+        "q": "How many assets are registered?",
+        "scope": "in",
+        "intent": "count_assets"
+      },
+      {
+        "q": "How many laptops are in maintenance?",
+        "scope": "in",
+        "intent": "count_assets"
+      },
+      {
+        "q": "How many lost phones are there?",
+        "scope": "in",
+        "intent": "count_assets"
+      },
+      {
+        "q": "How many spare monitors do we have?",
+        "scope": "in",
+        "intent": "count_assets"
+      },
+      {
+        "q": "How many laptops are assigned in the IT department?",
+        "scope": "in",
+        "intent": "count_assets"
+      },
+      {
+        "q": "How many laptops in Sandton?",
+        "scope": "in",
+        "intent": "count_assets"
+      },
+      {
+        "q": "How many Dell laptops do we have?",
+        "scope": "in",
+        "intent": "count_assets"
+      },
+      {
+        "q": "How many MacBooks do we have?",
+        "scope": "in",
+        "intent": "count_assets"
+      }
+    ]
+  },
+  {
+    "group": "Splits with a chart",
+    "prompts": [
+      {
+        "q": "Show assets by status",
+        "scope": "in",
+        "intent": "breakdown_assets"
+      },
+      {
+        "q": "Show assets by type",
+        "scope": "in",
+        "intent": "breakdown_assets"
+      },
+      {
+        "q": "Show assets by location",
+        "scope": "in",
+        "intent": "breakdown_assets"
+      },
+      {
+        "q": "Show assets by department",
+        "scope": "in",
+        "intent": "breakdown_assets"
+      },
+      {
+        "q": "Show spare stock by type",
+        "scope": "in",
+        "intent": "breakdown_assets"
+      },
+      {
+        "q": "Show laptops by location",
+        "scope": "in",
+        "intent": "breakdown_assets"
+      },
+      {
+        "q": "List all the asset types we have",
+        "scope": "in",
+        "intent": "breakdown_assets"
+      },
+      {
+        "q": "What types of assets do we have?",
+        "scope": "in",
+        "intent": "breakdown_assets"
+      },
+      {
+        "q": "Show asset categories",
+        "scope": "in",
+        "intent": "breakdown_assets"
+      }
+    ]
+  },
+  {
+    "group": "Lists with a table",
+    "prompts": [
+      {
+        "q": "Show me the available monitors",
+        "scope": "in",
+        "intent": "list_assets"
+      },
+      {
+        "q": "List the retired laptops",
+        "scope": "in",
+        "intent": "list_assets"
+      },
+      {
+        "q": "Which assets are in repair?",
+        "scope": "in",
+        "intent": "list_assets"
+      },
+      {
+        "q": "List all printers",
+        "scope": "in",
+        "intent": "list_assets"
+      }
+    ]
+  },
+  {
+    "group": "Warranty",
+    "prompts": [
+      {
+        "q": "Which assets go out of warranty next month?",
+        "scope": "in",
+        "intent": "warranty_assets"
+      },
+      {
+        "q": "What is going out of warranty this month?",
+        "scope": "in",
+        "intent": "warranty_assets"
+      },
+      {
+        "q": "Show assets already out of warranty",
+        "scope": "in",
+        "intent": "warranty_assets"
+      },
+      {
+        "q": "Which laptops have warranty expiring in the next 90 days?",
+        "scope": "in",
+        "intent": "warranty_assets"
+      },
+      {
+        "q": "Warranty expiring in the next 60 days",
+        "scope": "in",
+        "intent": "warranty_assets"
+      }
+    ]
+  },
+  {
+    "group": "Cost comparisons",
+    "prompts": [
+      {
+        "q": "Compare purchase spend this month and last month",
+        "scope": "in",
+        "intent": "spend_by_period"
+      },
+      {
+        "q": "Compare purchase spend this quarter and last quarter",
+        "scope": "in",
+        "intent": "spend_by_period"
+      },
+      {
+        "q": "Compare repair costs this month and last month",
+        "scope": "in",
+        "intent": "maintenance_cost_by_period"
+      },
+      {
+        "q": "Compare repair costs this quarter and last quarter",
+        "scope": "in",
+        "intent": "maintenance_cost_by_period"
+      }
+    ]
+  },
+  {
+    "group": "Repairs",
+    "prompts": [
+      {
+        "q": "Show open repair cases",
+        "scope": "in",
+        "intent": "maintenance_open"
+      },
+      {
+        "q": "How many open maintenance records are there?",
+        "scope": "in",
+        "intent": "maintenance_open"
+      }
+    ]
+  },
+  {
+    "group": "Who holds what",
+    "prompts": [
+      {
+        "q": "What does Thandi Nkosi have?",
+        "scope": "in",
+        "intent": "assets_of_person"
+      },
+      {
+        "q": "What does Sipho have?",
+        "scope": "in",
+        "intent": "assets_of_person"
+      },
+      {
+        "q": "Which assets does Naledi have?",
+        "scope": "in",
+        "intent": "assets_of_person"
+      }
+    ]
+  },
+  {
+    "group": "Audit and AOD (needs the proposed migration)",
+    "prompts": [
+      {
+        "q": "How many laptops are currently unconfirmed?",
+        "scope": "in",
+        "intent": "unconfirmed_assets"
+      },
+      {
+        "q": "Show unconfirmed monitors",
+        "scope": "in",
+        "intent": "unconfirmed_assets"
+      },
+      {
+        "q": "Which confirmations are overdue?",
+        "scope": "in",
+        "intent": "overdue_confirmations"
+      },
+      {
+        "q": "Which office has the most audit exceptions?",
+        "scope": "in",
+        "intent": "audit_exceptions_by_location"
+      },
+      {
+        "q": "What is the open AOD value?",
+        "scope": "in",
+        "intent": "open_aod_value"
+      }
+    ]
+  },
+  {
+    "group": "Follow-up questions",
+    "prompts": [
+      {
+        "q": "and laptops?",
+        "after": "How many monitors are available?",
+        "scope": "in",
+        "intent": "count_assets"
+      },
+      {
+        "q": "what about retired?",
+        "after": "How many monitors are available?",
+        "scope": "in",
+        "intent": "count_assets"
+      },
+      {
+        "q": "and at Umhlanga?",
+        "after": "How many laptops are available?",
+        "scope": "in",
+        "intent": "count_assets"
+      }
+    ]
+  },
+  {
+    "group": "Questions that must be refused",
+    "prompts": [
+      {
+        "q": "What's our total headcount in the Sales department?",
+        "scope": "out",
+        "intent": null
+      },
+      {
+        "q": "How many employees do we have?",
+        "scope": "out",
+        "intent": null
+      },
+      {
+        "q": "What are the salaries in IT?",
+        "scope": "out",
+        "intent": null
+      },
+      {
+        "q": "What is the depreciation on my laptops?",
+        "scope": "out",
+        "intent": null
+      },
+      {
+        "q": "What is the book value of our assets?",
+        "scope": "out",
+        "intent": null
+      },
+      {
+        "q": "What's the weather in Durban?",
+        "scope": "out",
+        "intent": null
+      },
+      {
+        "q": "Who won the rugby?",
+        "scope": "out",
+        "intent": null
+      },
+      {
+        "q": "hello",
+        "scope": "out",
+        "intent": null
+      },
+      {
+        "q": "asdf qwerty",
+        "scope": "out",
+        "intent": null
+      },
+      {
+        "q": "How many monitors are in Cape Town?",
+        "scope": "out",
+        "intent": null
+      }
+    ]
+  },
+  {
+    "group": "Edge cases",
+    "prompts": [
+      {
+        "q": "how many lapt0ps are there",
+        "scope": "out",
+        "intent": null
+      },
+      {
+        "q": "LAPTOPS AVAILABLE??",
+        "scope": "out",
+        "intent": null
+      },
+      {
+        "q": "Delete all assets",
+        "scope": "in",
+        "intent": "list_assets"
+      },
+      {
+        "q": "Show me everything",
+        "scope": "out",
+        "intent": null
+      }
+    ]
+  },
+  {
+    "group": "Looser wording (a good test for the AI model)",
+    "prompts": [
+      {
+        "q": "Got any spare notebooks lying around?",
+        "scope": "in",
+        "intent": "count_assets"
+      },
+      {
+        "q": "Which equipment is currently being fixed?",
+        "scope": "in",
+        "intent": "list_assets"
+      },
+      {
+        "q": "What is about to fall out of warranty?",
+        "scope": "in",
+        "intent": "warranty_assets"
+      },
+      {
+        "q": "Did we spend more on new kit this month or last month?",
+        "scope": "in",
+        "intent": "spend_by_period"
+      },
+      {
+        "q": "Who has the most laptops?",
+        "scope": "out",
+        "intent": null
+      },
+      {
+        "q": "How many Dell machines are assigned to Sandton staff?",
+        "scope": "in",
+        "intent": "count_assets"
+      },
+      {
+        "q": "Give me a rundown of our stock levels",
+        "scope": "in",
+        "intent": "breakdown_assets"
+      },
+      {
+        "q": "Are there any outstanding confirmations?",
+        "scope": "in",
+        "intent": "unconfirmed_assets"
+      },
+      {
+        "q": "How many laptops do we have in total?",
+        "scope": "in",
+        "intent": "count_assets"
+      }
+    ]
+  },
+  {
+    "group": "Dashboards and charts",
+    "prompts": [
+      {
+        "q": "What dashboards are there?",
+        "scope": "in",
+        "intent": "list_dashboards"
+      },
+      {
+        "q": "Show me the dashboards",
+        "scope": "in",
+        "intent": "list_dashboards"
+      },
+      {
+        "q": "Open the Overview dashboard",
+        "scope": "in",
+        "intent": "open_dashboard"
+      },
+      {
+        "q": "Open the Operational dashboard",
+        "scope": "in",
+        "intent": "open_dashboard"
+      },
+      {
+        "q": "Show me the management dashboard",
+        "scope": "in",
+        "intent": "open_dashboard"
+      },
+      {
+        "q": "Show purchases as a chart",
+        "scope": "in",
+        "intent": "show_chart"
+      },
+      {
+        "q": "Show the repair cost trend",
+        "scope": "in",
+        "intent": "show_chart"
+      },
+      {
+        "q": "Warranties ending over time",
+        "scope": "in",
+        "intent": "show_chart"
+      },
+      {
+        "q": "Show spare stock as a graph",
+        "scope": "in",
+        "intent": "show_chart"
+      },
+      {
+        "q": "Chart purchase value by department",
+        "scope": "in",
+        "intent": "show_chart"
+      },
+      {
+        "q": "chart my monitors",
+        "scope": "in",
+        "intent": "breakdown_assets"
+      },
+      {
+        "q": "chart it",
+        "scope": "out",
+        "intent": "show_chart"
+      },
+      {
+        "q": "show this as a chart",
+        "after": "Compare purchase spend this month and last month",
+        "scope": "in",
+        "intent": "show_chart"
+      },
+      {
+        "q": "give me this in a chart format",
+        "after": "How many laptops are available?",
+        "scope": "in",
+        "intent": "breakdown_assets"
+      }
+    ]
+  },
+  {
+    "group": "Lookups, rankings and date ranges",
+    "prompts": [
+      {
+        "q": "Tell me about AST-0013",
+        "scope": "in",
+        "intent": "asset_lookup"
+      },
+      {
+        "q": "Who has AST-0001?",
+        "scope": "in",
+        "intent": "asset_lookup"
+      },
+      {
+        "q": "Where is ast0013?",
+        "scope": "in",
+        "intent": "asset_lookup"
+      },
+      {
+        "q": "details for AST-9999",
+        "scope": "in",
+        "intent": "asset_lookup"
+      },
+      {
+        "q": "Which location has the most laptops?",
+        "scope": "in",
+        "intent": "ranking"
+      },
+      {
+        "q": "Which location has the fewest laptops?",
+        "scope": "in",
+        "intent": "ranking"
+      },
+      {
+        "q": "Top 3 departments by asset value",
+        "scope": "in",
+        "intent": "ranking"
+      },
+      {
+        "q": "Which asset type is the most expensive?",
+        "scope": "in",
+        "intent": "ranking"
+      },
+      {
+        "q": "Which department has the most assets?",
+        "scope": "in",
+        "intent": "ranking"
+      },
+      {
+        "q": "What did we buy in the last 90 days?",
+        "scope": "in",
+        "intent": "purchases_in_period"
+      },
+      {
+        "q": "What did we spend in the last 6 months?",
+        "scope": "in",
+        "intent": "purchases_in_period"
+      },
+      {
+        "q": "Which assets were bought between July and September?",
+        "scope": "in",
+        "intent": "purchases_in_period"
+      },
+      {
+        "q": "Show laptops bought this year",
+        "scope": "in",
+        "intent": "purchases_in_period"
+      },
+      {
+        "q": "How many repairs were reported in the last 30 days?",
+        "scope": "in",
+        "intent": "repairs_in_period"
+      },
+      {
+        "q": "How many repairs this quarter?",
+        "scope": "in",
+        "intent": "repairs_in_period"
+      },
+      {
+        "q": "How many laptops are older than 1 year?",
+        "scope": "in",
+        "intent": "count_assets"
+      },
+      {
+        "q": "List monitors older than 2 years",
+        "scope": "in",
+        "intent": "list_assets"
+      },
+      {
+        "q": "How many assets were added this month?",
+        "scope": "out",
+        "intent": "count_assets"
+      },
+      {
+        "q": "Which location has the most laptops bought this year?",
+        "scope": "out",
+        "intent": "ranking"
+      }
+    ]
+  },
+  {
+    "group": "Your assets, history, leavers and cases",
+    "prompts": [
+      {
+        "q": "What am I responsible for?",
+        "scope": "in",
+        "intent": "my_assets"
+      },
+      {
+        "q": "Show my laptops",
+        "scope": "in",
+        "intent": "my_assets"
+      },
+      {
+        "q": "What do I have?",
+        "scope": "in",
+        "intent": "my_assets"
+      },
+      {
+        "q": "Show my team's assets",
+        "scope": "in",
+        "intent": "team_assets"
+      },
+      {
+        "q": "What does my department have?",
+        "scope": "in",
+        "intent": "team_assets"
+      },
+      {
+        "q": "Show the history of AST-0001",
+        "scope": "in",
+        "intent": "asset_timeline"
+      },
+      {
+        "q": "what happened to AST-0013?",
+        "scope": "in",
+        "intent": "asset_timeline"
+      },
+      {
+        "q": "Which assets are still held by people who have left?",
+        "scope": "in",
+        "intent": "unrecovered_assets"
+      },
+      {
+        "q": "Show assets not yet recovered from leavers",
+        "scope": "in",
+        "intent": "unrecovered_assets"
+      },
+      {
+        "q": "Show open loss and theft cases",
+        "scope": "in",
+        "intent": "open_loss_cases"
+      },
+      {
+        "q": "How many assets were stolen?",
+        "scope": "in",
+        "intent": "open_loss_cases"
+      },
+      {
+        "q": "Who has an open AOD?",
+        "scope": "in",
+        "intent": "aod_cases"
+      },
+      {
+        "q": "Show open AOD cases",
+        "scope": "in",
+        "intent": "aod_cases"
+      },
+      {
+        "q": "How old are our laptops?",
+        "scope": "in",
+        "intent": "laptop_ages"
+      },
+      {
+        "q": "Show spare stock by location",
+        "scope": "in",
+        "intent": "breakdown_assets"
+      },
+      {
+        "q": "show its history",
+        "after": "Tell me about AST-0001",
+        "scope": "in",
+        "intent": "asset_timeline"
+      }
+    ]
+  },
+  {
+    "group": "Different users (same question, different answer)",
+    "prompts": [
+      {
+        "q": "How many assets are registered?",
+        "as": "naledi.mokoena@example.co.za",
+        "scope": "in",
+        "intent": "count_assets"
+      },
+      {
+        "q": "How many assets are registered?",
+        "as": "sipho.dlamini@example.co.za",
+        "scope": "in",
+        "intent": "count_assets"
+      },
+      {
+        "q": "How many assets are registered?",
+        "as": "thandi.nkosi@example.co.za",
+        "scope": "in",
+        "intent": "count_assets"
+      },
+      {
+        "q": "Which office has the most audit exceptions?",
+        "as": "thandi.nkosi@example.co.za",
+        "scope": "in",
+        "intent": "audit_exceptions_by_location"
+      }
+    ]
+  }
+]

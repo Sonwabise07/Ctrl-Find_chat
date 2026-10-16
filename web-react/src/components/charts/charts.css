@@ -1,0 +1,73 @@
+.chart-view {
+  margin: 10px 0 0;
+  padding: 12px 14px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.chart-view__note {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12.5px;
+}
+
+.bar-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+.bar-list__row {
+  display: grid;
+  grid-template-columns: minmax(70px, 120px) 1fr auto;
+  gap: 10px;
+  align-items: center;
+  font-size: 13px;
+}
+.bar-list__label {
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+.bar-list__track {
+  height: 9px;
+  background: var(--track);
+  border-radius: 9px;
+  overflow: hidden;
+}
+.bar-list__fill {
+  display: block;
+  height: 100%;
+  background: var(--blue);
+  border-radius: 9px;
+}
+.bar-list__value {
+  font-weight: 700;
+  text-align: right;
+  white-space: nowrap;
+}
+.bar-list__share {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.column-chart {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.column-chart__axis {
+  stroke: var(--line);
+}
+.column-chart__bar {
+  fill: var(--blue);
+}
+.column-chart__label {
+  fill: var(--muted);
+  font-size: 11px;
+}
+.column-chart__value {
+  fill: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+}

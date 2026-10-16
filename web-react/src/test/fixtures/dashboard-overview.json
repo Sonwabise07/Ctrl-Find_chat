@@ -1,0 +1,213 @@
+{
+  "id": "overview",
+  "title": "Overview",
+  "widgets": [
+    {
+      "id": "total",
+      "type": "kpi",
+      "title": "Total registered assets",
+      "size": "small",
+      "tone": "info",
+      "available": true,
+      "data": {
+        "value": 42,
+        "text": "42",
+        "tag": "+42 this month"
+      }
+    },
+    {
+      "id": "assigned",
+      "type": "kpi",
+      "title": "Assigned assets",
+      "size": "small",
+      "tone": "accent",
+      "available": true,
+      "data": {
+        "value": 26,
+        "text": "26",
+        "tag": "62% of all assets"
+      }
+    },
+    {
+      "id": "open_repairs",
+      "type": "kpi",
+      "title": "Open repair cases",
+      "size": "small",
+      "tone": "warn",
+      "available": true,
+      "data": {
+        "value": 3,
+        "text": "3",
+        "tag": "1 in progress"
+      }
+    },
+    {
+      "id": "warranty_ended",
+      "type": "kpi",
+      "title": "Warranty ended",
+      "size": "small",
+      "tone": "danger",
+      "available": true,
+      "data": {
+        "value": 3,
+        "text": "3",
+        "tag": "2 end within 30 days"
+      }
+    },
+    {
+      "id": "by_status",
+      "type": "bars",
+      "title": "Assets by status",
+      "size": "medium",
+      "available": true,
+      "data": {
+        "total": 42,
+        "rows": [
+          {
+            "label": "Assigned",
+            "value": 26,
+            "text": "26",
+            "share": 61.9
+          },
+          {
+            "label": "Available",
+            "value": 9,
+            "text": "9",
+            "share": 21.4
+          },
+          {
+            "label": "In Maintenance",
+            "value": 3,
+            "text": "3",
+            "share": 7.1
+          },
+          {
+            "label": "Lost",
+            "value": 2,
+            "text": "2",
+            "share": 4.8
+          },
+          {
+            "label": "Retired",
+            "value": 2,
+            "text": "2",
+            "share": 4.8
+          }
+        ]
+      }
+    },
+    {
+      "id": "alerts",
+      "type": "list",
+      "title": "Upcoming alerts",
+      "size": "medium",
+      "available": true,
+      "data": {
+        "rows": [
+          {
+            "title": "No display signal",
+            "subtitle": "Open repair · AST-0031 · reported 01 Oct",
+            "tone": "warn"
+          },
+          {
+            "title": "Battery swelling",
+            "subtitle": "Open repair · AST-0013 · reported 02 Oct",
+            "tone": "warn"
+          },
+          {
+            "title": "Screen flicker",
+            "subtitle": "Open repair · AST-0014 · reported 04 Oct",
+            "tone": "warn"
+          },
+          {
+            "title": "Warranty ends 21 Oct",
+            "subtitle": "Laptop · AST-0010",
+            "tone": "info"
+          },
+          {
+            "title": "Warranty ends 07 Nov",
+            "subtitle": "Laptop · AST-0001",
+            "tone": "info"
+          }
+        ]
+      }
+    },
+    {
+      "id": "activity",
+      "type": "table",
+      "title": "Recent activity",
+      "size": "full",
+      "available": true,
+      "data": {
+        "columns": [
+          {
+            "key": "asset",
+            "title": "Asset"
+          },
+          {
+            "key": "event",
+            "title": "Event"
+          },
+          {
+            "key": "employee",
+            "title": "Employee"
+          },
+          {
+            "key": "changed_on",
+            "title": "Date"
+          }
+        ],
+        "rows": [
+          {
+            "asset": "AST-0021 · Dell P2423 24in monitor",
+            "event": "Assigned",
+            "employee": "Naledi Mokoena",
+            "changed_on": "08 Oct 2026"
+          },
+          {
+            "asset": "AST-0018 · Dell U2723QE 27in monitor",
+            "event": "Assigned",
+            "employee": "Naledi Mokoena",
+            "changed_on": "08 Oct 2026"
+          },
+          {
+            "asset": "AST-0003 · Dell Latitude 5440 laptop",
+            "event": "Assigned",
+            "employee": "Naledi Mokoena",
+            "changed_on": "08 Oct 2026"
+          },
+          {
+            "asset": "AST-0002 · Dell Latitude 7440 laptop",
+            "event": "Assigned",
+            "employee": "Naledi Mokoena",
+            "changed_on": "07 Oct 2026"
+          },
+          {
+            "asset": "AST-0021 · Dell P2423 24in monitor",
+            "event": "Registered",
+            "employee": "Naledi Mokoena",
+            "changed_on": "03 Oct 2026"
+          },
+          {
+            "asset": "AST-0018 · Dell U2723QE 27in monitor",
+            "event": "Registered",
+            "employee": "Naledi Mokoena",
+            "changed_on": "03 Oct 2026"
+          },
+          {
+            "asset": "AST-0003 · Dell Latitude 5440 laptop",
+            "event": "Registered",
+            "employee": "Naledi Mokoena",
+            "changed_on": "03 Oct 2026"
+          },
+          {
+            "asset": "AST-0002 · Dell Latitude 7440 laptop",
+            "event": "Registered",
+            "employee": "Naledi Mokoena",
+            "changed_on": "02 Oct 2026"
+          }
+        ]
+      }
+    }
+  ]
+}

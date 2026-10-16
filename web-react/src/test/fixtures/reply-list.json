@@ -1,0 +1,41 @@
+{
+  "scope": "in",
+  "answer": "**3 assets** match.",
+  "intent": "list_assets",
+  "classifier": "rules",
+  "slots": {
+    "asset_type": "Monitor",
+    "status": "Available"
+  },
+  "source": "Based on Asset register data as of today.",
+  "chart": null,
+  "table": {
+    "columns": ["asset_no", "description", "status", "location", "assigned_to"],
+    "rows": [
+      {
+        "asset_no": "AST-0028",
+        "description": "Dell U2723QE 27in monitor",
+        "status": "Available",
+        "location": "Midrand DC",
+        "assigned_to": "-"
+      },
+      {
+        "asset_no": "AST-0029",
+        "description": "Dell P2423 24in monitor",
+        "status": "Available",
+        "location": "Sandton HQ",
+        "assigned_to": "-"
+      },
+      {
+        "asset_no": "AST-0030",
+        "description": "Dell U2723QE 27in monitor",
+        "status": "Available",
+        "location": "Midrand DC",
+        "assigned_to": "-"
+      }
+    ]
+  },
+  "dashboard": null,
+  "chips": [],
+  "details": null
+}

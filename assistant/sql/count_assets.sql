@@ -1,0 +1,1 @@
+SELECT COUNT(*) AS value FROM scoped a {{JOINS}} WHERE {{FILTERS}}

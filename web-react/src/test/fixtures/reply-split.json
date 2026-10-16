@@ -1,0 +1,45 @@
+{
+  "scope": "in",
+  "answer": "Here is the split of **42 assets** by status. **Assigned** is highest with **26**.",
+  "intent": "breakdown_assets",
+  "classifier": "rules",
+  "slots": {
+    "group_by": "status"
+  },
+  "source": "Based on Asset register data as of today.",
+  "chart": {
+    "rows": [
+      {
+        "label": "Assigned",
+        "value": 26,
+        "text": "26"
+      },
+      {
+        "label": "Available",
+        "value": 9,
+        "text": "9"
+      },
+      {
+        "label": "In Maintenance",
+        "value": 3,
+        "text": "3"
+      },
+      {
+        "label": "Lost",
+        "value": 2,
+        "text": "2"
+      },
+      {
+        "label": "Retired",
+        "value": 2,
+        "text": "2"
+      }
+    ],
+    "note": "Comparison across 5 status values.",
+    "kind": "bars"
+  },
+  "table": null,
+  "dashboard": null,
+  "chips": [],
+  "details": null
+}

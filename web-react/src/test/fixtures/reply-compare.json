@@ -1,0 +1,30 @@
+{
+  "scope": "in",
+  "answer": "**Oct 2026**: R63 150 across 4 records; **Sep 2026**: R122 100 across 7 records (purchases).",
+  "intent": "spend_by_period",
+  "classifier": "rules",
+  "slots": {
+    "window": "this_month"
+  },
+  "source": "Based on Asset register data (purchase price and date) as of today.",
+  "chart": {
+    "rows": [
+      {
+        "label": "Sep 2026",
+        "value": 122100.0,
+        "text": "R122 100"
+      },
+      {
+        "label": "Oct 2026",
+        "value": 63150.0,
+        "text": "R63 150"
+      }
+    ],
+    "note": "Comparison of two periods.",
+    "kind": "bars"
+  },
+  "table": null,
+  "dashboard": null,
+  "chips": [],
+  "details": null
+}

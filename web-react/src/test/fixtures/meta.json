@@ -1,0 +1,90 @@
+{
+  "chips": [
+    {
+      "label": "Warranties expiring",
+      "question": "Which assets go out of warranty next month?"
+    },
+    {
+      "label": "Open AOD value",
+      "question": "What is the open AOD value?"
+    },
+    {
+      "label": "Spare stock",
+      "question": "Show spare stock by type"
+    },
+    {
+      "label": "Show dashboards",
+      "question": "What dashboards are there?"
+    }
+  ],
+  "categories": [
+    {
+      "label": "Cost comparisons between periods",
+      "available": true
+    },
+    {
+      "label": "Counts by status or lifecycle state",
+      "available": true
+    },
+    {
+      "label": "Overdue confirmations",
+      "available": true
+    },
+    {
+      "label": "Warranty timelines",
+      "available": true
+    },
+    {
+      "label": "Open repairs and maintenance",
+      "available": true
+    },
+    {
+      "label": "Audit exceptions and open AOD value",
+      "available": true
+    },
+    {
+      "label": "Who holds which asset",
+      "available": true
+    },
+    {
+      "label": "Dashboards and charts",
+      "available": true
+    },
+    {
+      "label": "Find an asset by number",
+      "available": true
+    },
+    {
+      "label": "Rankings: most, fewest, top N",
+      "available": true
+    },
+    {
+      "label": "Date ranges and asset age",
+      "available": true
+    },
+    {
+      "label": "Your assets and your team's",
+      "available": true
+    },
+    {
+      "label": "Full history of an asset",
+      "available": true
+    },
+    {
+      "label": "Assets still held by people who left",
+      "available": true
+    },
+    {
+      "label": "Loss, theft and AOD cases",
+      "available": true
+    },
+    {
+      "label": "Laptop age and warranty",
+      "available": true
+    }
+  ],
+  "user": {
+    "name": "Naledi Mokoena",
+    "role": "fixed_assets"
+  }
+}

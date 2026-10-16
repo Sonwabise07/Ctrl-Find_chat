@@ -1,0 +1,100 @@
+{
+  "scope": "in",
+  "answer": "**13 assets** worth **R206 150** were bought between 15 Jul 2026 and 13 Oct 2026.",
+  "intent": "purchases_in_period",
+  "classifier": "rules",
+  "slots": {
+    "window": "days:90",
+    "date_from": "2026-07-15",
+    "date_to": "2026-10-13",
+    "date_label": "between 15 Jul 2026 and 13 Oct 2026"
+  },
+  "source": "Based on Asset register data (purchase price and date) as of today.",
+  "chart": null,
+  "table": {
+    "columns": ["asset_no", "description", "purchased", "price"],
+    "rows": [
+      {
+        "asset_no": "AST-0003",
+        "description": "Dell Latitude 5440 laptop",
+        "purchased": "03 Oct 2026",
+        "price": "R24 150"
+      },
+      {
+        "asset_no": "AST-0018",
+        "description": "Dell U2723QE 27in monitor",
+        "purchased": "03 Oct 2026",
+        "price": "R5 150"
+      },
+      {
+        "asset_no": "AST-0021",
+        "description": "Dell P2423 24in monitor",
+        "purchased": "03 Oct 2026",
+        "price": "R3 050"
+      },
+      {
+        "asset_no": "AST-0002",
+        "description": "Dell Latitude 7440 laptop",
+        "purchased": "02 Oct 2026",
+        "price": "R30 800"
+      },
+      {
+        "asset_no": "AST-0019",
+        "description": "Dell P2423 24in monitor",
+        "purchased": "24 Sep 2026",
+        "price": "R3 900"
+      },
+      {
+        "asset_no": "AST-0034",
+        "description": "Dell OptiPlex 7010 desktop",
+        "purchased": "19 Sep 2026",
+        "price": "R16 000"
+      },
+      {
+        "asset_no": "AST-0007",
+        "description": "Dell Latitude 5440 laptop",
+        "purchased": "12 Sep 2026",
+        "price": "R37 100"
+      },
+      {
+        "asset_no": "AST-0006",
+        "description": "Dell Latitude 7440 laptop",
+        "purchased": "11 Sep 2026",
+        "price": "R22 650"
+      },
+      {
+        "asset_no": "AST-0005",
+        "description": "Dell Latitude 5440 laptop",
+        "purchased": "10 Sep 2026",
+        "price": "R31 200"
+      },
+      {
+        "asset_no": "AST-0023",
+        "description": "Dell P2423 24in monitor",
+        "purchased": "08 Sep 2026",
+        "price": "R7 150"
+      },
+      {
+        "asset_no": "AST-0022",
+        "description": "Dell U2723QE 27in monitor",
+        "purchased": "07 Sep 2026",
+        "price": "R4 100"
+      },
+      {
+        "asset_no": "AST-0036",
+        "description": "Samsung Galaxy S24 phone",
+        "purchased": "22 Jul 2026",
+        "price": "R14 650"
+      },
+      {
+        "asset_no": "AST-0029",
+        "description": "Dell P2423 24in monitor",
+        "purchased": "17 Jul 2026",
+        "price": "R6 250"
+      }
+    ]
+  },
+  "details": null,
+  "dashboard": null,
+  "chips": []
+}

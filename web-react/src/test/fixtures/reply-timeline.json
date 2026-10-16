@@ -1,0 +1,67 @@
+{
+  "scope": "in",
+  "answer": "**AST-0001** has **8 recorded events**. The latest is **Confirmed** on 12 Oct 2026.",
+  "intent": "asset_timeline",
+  "classifier": "rules",
+  "slots": {
+    "asset_ref": "AST0001"
+  },
+  "source": "Based on Asset history as of today.",
+  "chart": null,
+  "table": {
+    "columns": ["occurred", "event", "detail", "done_by"],
+    "rows": [
+      {
+        "occurred": "12 Oct 2026",
+        "event": "Confirmed",
+        "detail": "Self-confirmation cycle",
+        "done_by": "Thandi Nkosi"
+      },
+      {
+        "occurred": "05 Oct 2026",
+        "event": "Repair completed",
+        "detail": "Keyboard replacement",
+        "done_by": "Workshop"
+      },
+      {
+        "occurred": "03 Oct 2026",
+        "event": "Repair reported",
+        "detail": "Keyboard replacement",
+        "done_by": "Workshop"
+      },
+      {
+        "occurred": "25 Sep 2026",
+        "event": "Confirmation requested",
+        "detail": "Self-confirmation cycle",
+        "done_by": "-"
+      },
+      {
+        "occurred": "17 Jul 2026",
+        "event": "Returned",
+        "detail": "Michael Govender",
+        "done_by": "Naledi Mokoena"
+      },
+      {
+        "occurred": "29 Mar 2026",
+        "event": "Assigned",
+        "detail": "Michael Govender",
+        "done_by": "Naledi Mokoena"
+      },
+      {
+        "occurred": "20 Mar 2026",
+        "event": "Assigned",
+        "detail": "Thandi Nkosi",
+        "done_by": "Naledi Mokoena"
+      },
+      {
+        "occurred": "15 Mar 2026",
+        "event": "Registered",
+        "detail": "AST-0001",
+        "done_by": "Naledi Mokoena"
+      }
+    ]
+  },
+  "details": null,
+  "dashboard": null,
+  "chips": []
+}

@@ -1,0 +1,26 @@
+{
+  "scope": "in",
+  "answer": "**3 dashboards** are available to you. Pick one to open it.",
+  "intent": "list_dashboards",
+  "classifier": "rules",
+  "slots": {},
+  "source": "Dashboards use the same data and the same access rules as the assistant.",
+  "chart": null,
+  "table": null,
+  "dashboard": null,
+  "chips": [
+    {
+      "label": "Overview",
+      "question": "Open the Overview dashboard"
+    },
+    {
+      "label": "Operational",
+      "question": "Open the Operational dashboard"
+    },
+    {
+      "label": "Management",
+      "question": "Open the Management dashboard"
+    }
+  ],
+  "details": null
+}

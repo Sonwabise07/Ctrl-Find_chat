@@ -1,0 +1,148 @@
+.widget-card {
+  height: 100%;
+  padding: 18px 20px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.widget-card__title {
+  margin: 0 0 14px;
+  font-size: 15.5px;
+}
+.widget-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13.5px;
+}
+
+.tone-info {
+  --tone: var(--blue);
+}
+.tone-warn {
+  --tone: var(--amber);
+}
+.tone-accent {
+  --tone: var(--purple);
+}
+.tone-danger,
+.tone-bad {
+  --tone: var(--red);
+}
+.tone-good {
+  --tone: var(--green);
+}
+.tone-neutral {
+  --tone: var(--muted);
+}
+
+.kpi-card {
+  height: 100%;
+  padding: 16px 18px 18px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--kpi);
+  border-radius: var(--radius);
+}
+.kpi-card--info {
+  --kpi: var(--blue);
+}
+.kpi-card--warn {
+  --kpi: var(--amber);
+}
+.kpi-card--accent {
+  --kpi: var(--purple);
+}
+.kpi-card--danger {
+  --kpi: var(--red);
+}
+.kpi-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.kpi-card__icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  color: #fff;
+  background: var(--kpi);
+}
+.kpi-card__tag {
+  color: var(--kpi);
+  font-size: 12.5px;
+  font-weight: 600;
+  text-align: right;
+}
+.kpi-card__value {
+  margin: 14px 0 2px;
+  font-size: 30px;
+  font-weight: 700;
+}
+.kpi-card__label {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13.5px;
+}
+
+.alert-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.alert-list__item {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+.alert-list__item:last-child {
+  border-bottom: 0;
+}
+.alert-list__dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  margin-top: 6px;
+  border-radius: 50%;
+  background: var(--tone);
+}
+.alert-list__title {
+  margin: 0;
+  font-weight: 600;
+}
+.alert-list__subtitle {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 12.5px;
+}
+
+.trend {
+  color: var(--tone);
+  font-weight: 600;
+}
+
+.key-values {
+  margin: 0;
+}
+.key-values__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+}
+.key-values__row:last-child {
+  border-bottom: 0;
+}
+.key-values dt {
+  color: var(--muted);
+}
+.key-values dd {
+  margin: 0;
+  font-weight: 700;
+  text-align: right;
+}
